@@ -1,6 +1,4 @@
-# Generate the etl.py script
 
-etl_code = """
 import pandas as pd
 import os
 
@@ -34,11 +32,3 @@ if __name__ == "__main__":
     df = load_data(raw_path)
     df_clean = clean_and_transform(df)
     save_cleaned_data(df_clean, processed_path)
-"""
-
-# Save the script to src/etl.py
-etl_file_path = "sajansshergill/job-success-predictor/src/etl.py"
-with open(etl_file_path, "w") as f:
-    f.write(etl_code)
-
-etl_file_path
